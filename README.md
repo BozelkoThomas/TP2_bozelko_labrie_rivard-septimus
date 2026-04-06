@@ -1,1 +1,9 @@
-# TP2_bozelko_labrie_rivard-septimus
+## Thomas
+- maquette
+- Boutons
+
+## Anne-Julie
+- assets (logo, fond, voitures)
+
+## Alexandre
+- Texte
