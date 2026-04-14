@@ -4,7 +4,7 @@ let translationX1;
 let translationX2;
 let voiture1Width;
 let voiture2Width;
-let compteARebours;
+window.alert("wowooowowowo");
 
 alert("test");
 
@@ -12,7 +12,7 @@ function compteARebours() {
     /* 
         Affiche un compte à rebours, démarrant à 3 et se terminant à 0, pour le lancement de la course.
     */
-    alert("test");
+   alert("roar");
 }
 
 function chronometre() {
