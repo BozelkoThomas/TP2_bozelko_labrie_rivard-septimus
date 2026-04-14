@@ -10,29 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img src="./assets/img/filtre" alt="" class="test">
+    <div id="compteARebours"></div>
     <header>
-
+        <img src="./assets/img/logo.svg" alt="" class="logo">    
+        <h1>Course de voiture</h1>
     </header>
     <main>
         <div>
             <img src="./assets/img/ligne_haut.svg" alt="" class="line">
         </div>
         <div>
-            <img src="./assets/img/auto_mauve.svg" alt="" class="car">
+            <img src="./assets/img/auto_mauve.svg" alt="" class="car" id="voiture1">
         </div>
         <div>
             <img src="./assets/img/ligne_milieu.png" alt="" class="line">
         </div>
         <div>
-            <img src="./assets/img/auto_rose.svg" alt="" class="car">
+            <img src="./assets/img/auto_rose.svg" alt="" class="car" id="voiture2">
         </div>
         <div>
             <img src="./assets/img/ligne_bas.svg" alt="" class="line">
         </div>
     </main>
     <footer>
-        <button>COMMENCER</button>
+        <button onclick="compteARebours()">COMMENCER</button>
         <div class="time">
             <div class="time__player">
                 <label for="mauve">Temps mauve :</label>
