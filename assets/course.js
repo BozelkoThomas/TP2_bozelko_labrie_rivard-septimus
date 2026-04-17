@@ -33,14 +33,19 @@ function compteARebours() {
 }
 
 function chronometre(ms) {
-    let totalSecondes = Math.floor(ms / 1000);
-    let heures = Math.floor(totalSecondes / 3600);
-    let minutes = Math.floor((totalSecondes % 3600) / 60);
-    let secondes = totalSecondes % 60;
 
-    return String(heures).padStart(2, "0") + ":"
-        + String(minutes).padStart(2, "0") + ":"
-        + String(secondes).padStart(2, "0");
+    let minutes = Math.floor(ms / 60000);
+
+    let secondes = Math.floor((ms % 60000) / 1000);
+
+    let millisecondes = ms % 1000;
+
+    // on garde seulement 2 chiffres pour les millisecondes (plus lisible)
+    millisecondes = Math.floor(millisecondes / 10);
+
+    return String(minutes).padStart(2, "0") + ":"
+        + String(secondes).padStart(2, "0") + ":"
+        + String(millisecondes).padStart(2, "0");
 }
 
 function lancerChrono() {
@@ -52,7 +57,7 @@ function lancerChrono() {
 
     document.getElementById("tempsMauve").value = temps;
     document.getElementById("tempsRose").value = temps;
-  }, 100);
+  }, 10);
 }
 
 function aleatoireTranslationX() {
