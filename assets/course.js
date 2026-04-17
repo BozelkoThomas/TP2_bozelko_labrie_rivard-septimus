@@ -17,6 +17,8 @@ function compteARebours() {
             document.getElementById("compteARebours").innerHTML = "";
         }
     }, 1000)
+
+    document.getElementById("btn").style.display = "none";
 }
 
 function chronometre() {
