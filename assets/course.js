@@ -54,12 +54,12 @@ function lancerChrono() {
 }
 
 function translationAleatoireX1() {
-    let translationAleatoire1 = (Math.floor(Math.random() * maxTranslationX) + 1);
+    let translationAleatoire1 = (Math.floor(Math.random() * 100) + 1);
     return translationAleatoire1;
 }
  
 function translationAleatoireX2() {
-    let translationAleatoire2 = (Math.floor(Math.random() * maxTranslationX) + 1);
+    let translationAleatoire2 = (Math.floor(Math.random() * 100) + 1);
     return translationAleatoire2;
 }
  
