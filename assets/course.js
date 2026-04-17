@@ -4,7 +4,7 @@ let translationX1;
 let translationX2;
 let voiture1Width;
 let voiture2Width;
-let compteur = 10;
+let compteur = 3;
 let interval;
 
 function compteARebours() {
