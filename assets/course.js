@@ -33,14 +33,10 @@ function compteARebours() {
 }
 
 function chronometre(ms) {
-
     let minutes = Math.floor(ms / 60000);
-
     let secondes = Math.floor((ms % 60000) / 1000);
-
     let millisecondes = ms % 1000;
 
-    // on garde seulement 2 chiffres pour les millisecondes (plus lisible)
     millisecondes = Math.floor(millisecondes / 10);
 
     return String(minutes).padStart(2, "0") + ":"
