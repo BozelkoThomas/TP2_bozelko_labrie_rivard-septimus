@@ -1,6 +1,3 @@
-let voiture1 = document.getElementById("voiture1");
-let voiture2 = document.getElementById("voiture2");
-
 let translationX1 = 0;
 let translationX2 = 0;
 
@@ -56,20 +53,35 @@ function lancerChrono() {
   }, 10);
 }
 
-function aleatoireTranslationX() {
-    let translationAleatoire = Math.floor(Math.random() * maxTranslationX) + 1;
-    return translationAleatoire;
+function translationAleatoireX1() {
+    let translationAleatoire1 = Math.floor(Math.random() * maxTranslationX) + 1;
+    return translationAleatoire1;
 }
-
+ 
+function translationAleatoireX2() {
+    let translationAleatoire2 = Math.floor(Math.random() * maxTranslationX) + 1;
+    return translationAleatoire2;
+}
+ 
+ 
 function deplacerVoiture() {
-    /* 
+    let voiture1 = document.getElementById("voiture1");
+    let voiture2 = document.getElementById("voiture2");
+    translationX1 = translationAleatoireX1();
+    translationX2 = translationAleatoireX2();
+    voiture1.style.marginLeft = translationX1 + "px";
+    voiture2.style.marginLeft = translationX2 + "px";
+ 
+ 
+    /*
         I. Met à jour les positions horizontales des voitures à intervalles réguliers pour simuler le
         mouvement.
-
+ 
         II. À chaque appel, ajoutez la valeur de aleatoireTranslationX() à translationX1 et translationX2 pour les déplacements aléatoires.
-
+ 
         III. Vérifiez si les translations dépassent les limites du conteneur et ajustez-les si nécessaire.
-
+ 
         IV. Mettez à jour les propriétés CSS left des voitures (voiture1.style.left et voiture2.style.left) avec les nouvelles positions.
     */
 }
+ 
