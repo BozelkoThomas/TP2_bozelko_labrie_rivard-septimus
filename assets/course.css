@@ -47,10 +47,11 @@ header {
 main {
     display: flex;
     flex-direction: column;
+    width: 1000px;
 }
 
 .line {
-    width: 100vw;
+    width: 100%;
 
     img {
         width: 100%;
@@ -58,7 +59,7 @@ main {
 }
 
 .car {
-    width: 10%;
+    width: 100px;
 }
 
 footer{
