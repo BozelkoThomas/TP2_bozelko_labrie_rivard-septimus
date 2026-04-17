@@ -18,7 +18,7 @@ function demarrerCourse() {
 function compteARebours() {
     compteur--;
     document.getElementById("compteARebours").innerHTML = compteur;
-    if (compteur === -1) {
+    if (compteur === 0) {
         clearInterval(interval)
         document.getElementById("compteARebours").style.display = "none";
     }
