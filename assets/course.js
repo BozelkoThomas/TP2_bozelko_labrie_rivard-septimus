@@ -55,5 +55,10 @@ function deplacerVoiture() {
 }
 
 function demarrerCourse() {
+    /*
+        I. Cette fonction est appelée lorsque le bouton "Démarrer la Course" est cliqué.
 
+        II. Utilisez setInterval(), qui est une fonction intégrée de JavaScript qui permet d'exécuter une fonction de manière périodique, à des intervalles réguliers définis. Cela permet de créer des
+        actions répétitives, animer les voitures, dans notre cas.
+    */
 }
