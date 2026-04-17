@@ -7,19 +7,23 @@ let voiture2Width;
 let compteur = 3;
 let interval;
 
-function compteARebours() {
-    document.getElementById("compteARebours").innerHTML = compteur;
-    interval = setInterval(function () {
-        compteur--;
-        document.getElementById("compteARebours").innerHTML = compteur;
-        if (compteur < 0) {
-            clearInterval(interval)
-            document.getElementById("compteARebours").innerHTML = "";
-        }
-    }, 1000)
 
+function demarrerCourse() {
     document.getElementById("btn").style.display = "none";
+    document.getElementById("compteARebours").innerHTML = compteur;
+    interval = setInterval(compteARebours, 1000);
 }
+
+function compteARebours() {
+    compteur--;
+    document.getElementById("compteARebours").innerHTML = compteur;
+    if (compteur === -1) {
+        clearInterval(interval)
+        document.getElementById("compteARebours").style.display = "none";
+    }
+}
+
+
 
 function chronometre() {
     /* 
@@ -57,14 +61,5 @@ function deplacerVoiture() {
         III. Vérifiez si les translations dépassent les limites du conteneur et ajustez-les si nécessaire.
 
         IV. Mettez à jour les propriétés CSS left des voitures (voiture1.style.left et voiture2.style.left) avec les nouvelles positions.
-    */
-}
-
-function demarrerCourse() {
-    /*
-        I. Cette fonction est appelée lorsque le bouton "Démarrer la Course" est cliqué.
-
-        II. Utilisez setInterval(), qui est une fonction intégrée de JavaScript qui permet d'exécuter une fonction de manière périodique, à des intervalles réguliers définis. Cela permet de créer des
-        actions répétitives, animer les voitures, dans notre cas.
     */
 }
