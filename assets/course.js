@@ -71,17 +71,5 @@ function deplacerVoiture() {
     translationX2 = translationAleatoireX2();
     voiture1.style.marginLeft = translationX1 + "px";
     voiture2.style.marginLeft = translationX2 + "px";
- 
- 
-    /*
-        I. Met à jour les positions horizontales des voitures à intervalles réguliers pour simuler le
-        mouvement.
- 
-        II. À chaque appel, ajoutez la valeur de aleatoireTranslationX() à translationX1 et translationX2 pour les déplacements aléatoires.
- 
-        III. Vérifiez si les translations dépassent les limites du conteneur et ajustez-les si nécessaire.
- 
-        IV. Mettez à jour les propriétés CSS left des voitures (voiture1.style.left et voiture2.style.left) avec les nouvelles positions.
-    */
 }
  
