@@ -1,33 +1,58 @@
-let voiture1 = document.getAnimations("voiture1");
+let voiture1 = document.getElementById("voiture1");
 let voiture2 = document.getElementById("voiture2");
-let translationX1;
-let translationX2;
+
+let translationX1 = 0;
+let translationX2 = 0;
+
 let voiture1Width = 100;
 let voiture2Width = 100;
 let containerWidth = 1000;
 let maxTranslationX = 900;
+
 let compteur = 3;
-let interval;
+let intervalRebours;
+let intervalDeplacement;
+let intervalChrono;
 
 function demarrerCourse() {
     document.getElementById("btn").style.display = "none";
     document.getElementById("compteARebours").innerHTML = compteur;
-    interval = setInterval(compteARebours, 1000);
+    intervalRebours = setInterval(compteARebours, 1000);
 }
 
 function compteARebours() {
     compteur--;
     document.getElementById("compteARebours").innerHTML = compteur;
+
     if (compteur === 0) {
-        clearInterval(interval)
+        clearInterval(intervalRebours);
         document.getElementById("compteARebours").style.display = "none";
+
+        intervalChrono = lancerChrono();
     }
 }
 
-function chronometre() {
-    /* 
-        Deux chronomètres sont utilisés pour mesurer le temps de chaque voiture lorsqu'elle atteint la ligne d'arrivée.
-    */
+function chronometre(ms) {
+    let totalSecondes = Math.floor(ms / 1000);
+    let heures = Math.floor(totalSecondes / 3600);
+    let minutes = Math.floor((totalSecondes % 3600) / 60);
+    let secondes = totalSecondes % 60;
+
+    return String(heures).padStart(2, "0") + ":"
+        + String(minutes).padStart(2, "0") + ":"
+        + String(secondes).padStart(2, "0");
+}
+
+function lancerChrono() {
+  let depart = Date.now();
+
+  return setInterval(function() {
+    let ecoule = Date.now() - depart;
+    let temps = chronometre(ecoule);
+
+    document.getElementById("tempsMauve").value = temps;
+    document.getElementById("tempsRose").value = temps;
+  }, 100);
 }
 
 function aleatoireTranslationX() {
