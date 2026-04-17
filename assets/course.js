@@ -2,11 +2,12 @@ let voiture1 = document.getAnimations("voiture1");
 let voiture2 = document.getElementById("voiture2");
 let translationX1;
 let translationX2;
-let voiture1Width;
-let voiture2Width;
+let voiture1Width = 100;
+let voiture2Width = 100;
+let containerWidth = 1000;
+let maxTranslationX = 900;
 let compteur = 3;
 let interval;
-
 
 function demarrerCourse() {
     document.getElementById("btn").style.display = "none";
@@ -23,8 +24,6 @@ function compteARebours() {
     }
 }
 
-
-
 function chronometre() {
     /* 
         Deux chronomètres sont utilisés pour mesurer le temps de chaque voiture lorsqu'elle atteint la ligne d'arrivée.
@@ -32,23 +31,8 @@ function chronometre() {
 }
 
 function aleatoireTranslationX() {
-    /* 
-        I. Génère une valeur aléatoire de translation horizontale pour une voiture en fonction de la
-        largeur du conteneur et des voitures.
-
-        II. Calculer la valeur maximale de déplacement horizontal (maxTranslationX) en so0ustrayant la
-        largeur de la voiture (voiture1Width) de la largeur du conteneur (containerWidth).
-
-        III. Utiliser Math.random() pour générer un nombre décimal pseudo-aléatoire entre 0 et
-        maxTranslationX.
-
-        IV. Multipliez ce nombre par maxTranslationX pour obtenir une translation horizontale
-        aléatoire.
-
-
-        V. Utilisez Math.floor() pour arrondir ce nombre à l'entier inférieur le plus proche et le
-        retourner.
-    */
+    let translationAleatoire = Math.floor(Math.random() * maxTranslationX) + 1;
+    return translationAleatoire;
 }
 
 function deplacerVoiture() {
