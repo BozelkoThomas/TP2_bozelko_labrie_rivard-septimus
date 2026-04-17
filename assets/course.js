@@ -54,12 +54,12 @@ function lancerChrono() {
 }
 
 function translationAleatoireX1() {
-    let translationAleatoire1 = (Math.floor(Math.random() * maxTranslationX) + 1) + translationAleatoire1;
+    let translationAleatoire1 = (Math.floor(Math.random() * maxTranslationX) + 1);
     return translationAleatoire1;
 }
  
 function translationAleatoireX2() {
-    let translationAleatoire2 = (Math.floor(Math.random() * maxTranslationX) + 1) + translationAleatoire2;
+    let translationAleatoire2 = (Math.floor(Math.random() * maxTranslationX) + 1);
     return translationAleatoire2;
 }
  
@@ -67,8 +67,8 @@ function translationAleatoireX2() {
 function deplacerVoiture() {
     let voiture1 = document.getElementById("voiture1");
     let voiture2 = document.getElementById("voiture2");
-    translationX1 = translationAleatoireX1();
-    translationX2 = translationAleatoireX2();
+    translationX1 = translationX1 + translationAleatoireX1();
+    translationX2 = translationX2 + translationAleatoireX2();
     voiture1.style.marginLeft = translationX1 + "px";
     voiture2.style.marginLeft = translationX2 + "px";
 }
